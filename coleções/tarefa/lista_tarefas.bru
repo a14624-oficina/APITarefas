@@ -1,0 +1,15 @@
+meta {
+  name: lista_tarefas
+  type: http
+  seq: 0
+}
+
+get {
+  url: http://127.0.0.1:5000/tarefas
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "inserir_tarefa",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
