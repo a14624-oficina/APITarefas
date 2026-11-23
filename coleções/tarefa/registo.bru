@@ -5,7 +5,15 @@ meta {
 }
 
 post {
-  url: http://127.0.0.1:5000/tarefas
-  body: none
+  url: http://127.0.0.1:5000/registar
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "username":"Jose",
+    "email":"Jose@gmail.com",
+    "password":"123"
+  }
 }

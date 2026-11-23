@@ -1,15 +1,29 @@
 meta {
   name: criar_tarefa
   type: http
-  seq: 0
+  seq: 1
 }
 
 post {
-  url: http://127.0.0.1:5000/criar_tarefa
-  body: none
+  url: http://127.0.0.1:5000/tarefas
+  body: json
   auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc5NTQ0NTU1OSwianRpIjoiOWExYzBiNTAtYTVkMC00ZWMwLWE1MzUtNzUzNTBkZTA2YjVmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjIiLCJuYmYiOjE3OTU0NDU1NTksImNzcmYiOiJmMWQ1MDc4OC1jNmJiLTRhYzUtODVkYS0yYzUyMWQ2YzdmOWMiLCJleHAiOjE3OTU0NDYxNTksInRpcG8iOiJ1dGlsaXphZG9yIn0.ZB_0OSRXrgP7BZnaUzmCJHHU_lOPw9G9MiyxMPBSjN8
+}
+
+body:json {
+  {
+    "titulo":"tarefa2",
+    "descricao":"Segunda tarefa",
+    "estado": "Pendente",
+    "utilizador_id":"2"
+  }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
